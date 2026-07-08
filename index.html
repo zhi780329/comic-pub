@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>发文就绪包 · 第1-3话</title>
+<title>发文就绪包 · 第1-4话</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:0 0 60px;color:#333}
@@ -46,17 +46,18 @@ body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',s
 
 <div class="header">
   <h1>一台20年前的破电脑，我这个医生造出了自己的AI分身</h1>
-  <h2>发文就绪包 · 第1–3话</h2>
+  <h2>发文就绪包 · 第1–4话</h2>
   <div style="font-size:11px;color:#777;margin-top:8px">⬇ 长按图片保存到手机 → 选文案复制 → 去小红书粘贴发布</div>
 </div>
 
 <!-- 正文版本切换 -->
 <div class="section">
   <div class="section-title">📝 正文 <span class="badge">先选版本</span></div>
-  <div class="section-desc">发三话合集还是单发第3话？选好后点复制按钮。</div>
+  <div class="section-desc">发三话合集、单发第3话、还是单发第4话？选好后点复制按钮。</div>
   <div class="option-row">
     <div class="option-btn active" data-opt="full" onclick="switchText('full')">📚 第1–3话合集</div>
-    <div class="option-btn" data-opt="single" onclick="switchText('single')">🎯 单发第3话</div>
+    <div class="option-btn" data-opt="single3" onclick="switchText('single3')">🎯 单发第3话</div>
+    <div class="option-btn" data-opt="single4" onclick="switchText('single4')">🎯 单发第4话</div>
   </div>
   <div class="copy-area">
     <div class="text-block" id="bodyText">
@@ -106,6 +107,12 @@ body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',s
       <span style="font-size:11px;background:#666;color:#fff;font-weight:600;padding:3px 8px;border-radius:4px">预留</span>
       <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('250W电源装AI？疯了吧')">第4话预告</span>
     </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
+      <span style="font-size:11px;background:#4caf50;color:#fff;font-weight:600;padding:3px 8px;border-radius:4px">第3条</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('250W电源装AI？疯了吧')">主推</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('旧电脑跑AI，我试了真的行')">备A</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('破电脑装AI，风扇都吓掉了')">备B</span>
+    </div>
     <button class="copy-btn small" onclick="copyText('titleText','')">📋 复制标题</button>
   </div>
 </div>
@@ -154,6 +161,7 @@ body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',s
     <div class="img-tab active" data-ch="1" onclick="switchChapter(1)">第1话<span class="sub">90年代机房</span></div>
     <div class="img-tab" data-ch="2" onclick="switchChapter(2)">第2话<span class="sub">梦想到白大褂</span></div>
     <div class="img-tab" data-ch="3" onclick="switchChapter(3)">第3话<span class="sub">一个人的力量</span></div>
+    <div class="img-tab" data-ch="4" onclick="switchChapter(4)">第4话<span class="sub">250W电源装AI</span></div>
   </div>
   <div class="img-wrap show" data-ch="1">
     <img src="第1话_条漫.jpg" alt="第1话条漫(压缩版)" onclick="saveImage(this)">
@@ -176,6 +184,13 @@ body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',s
       <span class="save-link" onclick="saveImgEl('第3话_条漫.jpg','第3话条漫')">💾 保存图片</span>
     </div>
   </div>
+  <div class="img-wrap" data-ch="4">
+    <img src="" alt="第4话条漫(压缩版)" data-src="第4话_条漫.jpg" onclick="saveImage(this)">
+    <div class="img-foot">
+      <span>第4话 · 250W电源装AI？疯了吧</span>
+      <span class="save-link" onclick="saveImgEl('第4话_条漫.jpg','第4话条漫')">💾 保存图片</span>
+    </div>
+  </div>
 </div>
 
 <div class="notice">
@@ -183,7 +198,7 @@ body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',s
 </div>
 
 <div class="footer">
-  <p>第1–3话 · 矢量分镜预览版</p>
+  <p>第1–4话 · 矢量分镜预览版</p>
   <p>正式出图按分镜脚本提示词用AI绘画工具生成</p>
 </div>
 
@@ -216,7 +231,7 @@ function switchText(v){
 这是前3话：从90年代机房少年，到瓶颈中的医生，再到那个灵光一闪的瞬间。
 
 👉 还会继续画下去，关注我看后续。`;
-  } else {
+  } else if(v==='single3'){
     el.textContent=`病人越来越多，每天像打仗。
 同样的话，一天说几十遍。
 下了班，还有几十条消息等着回。
@@ -232,6 +247,27 @@ function switchText(v){
 
 我把这种"一个人的无力感"，画成了第3话。
 👉 前两话已发，这是续集。关注我看第4话。`;
+  } else {
+    el.textContent=`我有一台快20年的破电脑。
+外壳破损、前面板掉了、电源只有250W。
+朋友们说它早该扔了。
+
+可我还是把它搬了出来——
+擦灰、插电、按下开机键。
+风扇呜的一声转起来了。
+
+它跑不动AI，没关系。
+旧时代的电脑装不了新时代的脑子，但是……可以"借"啊。
+
+于是我开始折腾：
+装远程、搭环境、调推理框架。
+破风扇嗡嗡响，GTX 750Ti在拼命跑。
+
+250W电源带AI？疯了吧——
+可它还真跑起来了。
+
+我把这些折腾的过程，画成了第4话。
+👉 旧时代的老电脑，跑起了新时代的AI。`;
   }
 }
 
