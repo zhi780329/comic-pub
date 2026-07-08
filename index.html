@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>发文就绪包 · 第1-3话</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:#f5f5f5;font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:0 0 60px;color:#333}
+.header{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:28px 20px 20px;text-align:center}
+.header h1{font-size:16px;font-weight:600;color:#ffd34d;line-height:1.5}
+.header h2{font-size:13px;color:#aaa;margin-top:6px;font-weight:400}
+.section{margin:12px 16px;background:#fff;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);overflow:hidden}
+.section-title{font-size:14px;font-weight:600;padding:16px 16px 4px;color:#1a1a2e;display:flex;align-items:center;gap:6px}
+.section-title .badge{background:#e63b4e;color:#fff;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:400}
+.section-desc{font-size:12px;color:#999;padding:0 16px 12px;line-height:1.6}
+.copy-area{padding:0 16px 16px;position:relative}
+.copy-area textarea,.copy-area .text-block{width:100%;font-size:13px;line-height:1.8;color:#333;background:#fafafa;border:1px solid #eee;border-radius:8px;padding:12px;resize:vertical;font-family:inherit}
+.copy-area .text-block{min-height:60px;white-space:pre-wrap;word-break:break-word}
+.copy-btn{display:block;width:100%;padding:12px;background:#ffd34d;color:#1a1a2e;border:none;border-radius:8px;font-size:15px;font-weight:600;margin-top:10px;cursor:pointer;transition:all .2s}
+.copy-btn:active{background:#e6b830;transform:scale(.97)}
+.copy-btn.copied{background:#4caf50;color:#fff}
+.copy-btn.small{padding:10px;font-size:13px}
+.tag-block{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 16px}
+.tag{background:#f0f0f5;color:#555;font-size:12px;padding:5px 10px;border-radius:16px}
+.option-row{display:flex;gap:8px;padding:0 16px;margin-bottom:8px}
+.option-btn{flex:1;padding:8px;border:2px solid #ddd;border-radius:8px;background:#fff;font-size:13px;color:#666;text-align:center;cursor:pointer;transition:all .2s}
+.option-btn.active{border-color:#e63b4e;color:#e63b4e;background:#fff5f5;font-weight:600}
+.img-section .img-tabs{display:flex;gap:6px;padding:0 16px 12px}
+.img-section .img-tab{flex:1;padding:10px 0;border:2px solid #ddd;border-radius:8px;background:#fff;font-size:13px;color:#666;text-align:center;cursor:pointer;transition:all .2s;font-weight:500}
+.img-section .img-tab.active{border-color:#e63b4e;color:#e63b4e;background:#fff5f5;font-weight:700}
+.img-section .img-tab .sub{display:block;font-size:10px;color:#bbb;font-weight:400;margin-top:2px}
+.img-section .img-tab.active .sub{color:#e63b4e}
+.img-section .img-wrap{display:none}
+.img-section .img-wrap.show{display:block}
+.img-section .img-wrap img{width:100%;display:block}
+.img-section .img-wrap .img-foot{padding:10px 12px;font-size:12px;color:#888;display:flex;justify-content:space-between;align-items:center;background:#fafafa;border-top:1px solid #eee}
+.img-section .img-wrap .img-foot .save-link{color:#e63b4e;font-weight:600;cursor:pointer}
+.hidden{display:none}
+.notice{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:10px 12px;margin:0 16px 16px;font-size:12px;color:#795548;line-height:1.6}
+.notice strong{color:#e63b4e}
+.footer{text-align:center;padding:20px;color:#999;font-size:11px;line-height:1.8}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>一台20年前的破电脑，我这个医生造出了自己的AI分身</h1>
+  <h2>发文就绪包 · 第1–3话</h2>
+  <div style="font-size:11px;color:#777;margin-top:8px">⬇ 长按图片保存到手机 → 选文案复制 → 去小红书粘贴发布</div>
+</div>
+
+<!-- 正文版本切换 -->
+<div class="section">
+  <div class="section-title">📝 正文 <span class="badge">先选版本</span></div>
+  <div class="section-desc">发三话合集还是单发第3话？选好后点复制按钮。</div>
+  <div class="option-row">
+    <div class="option-btn active" data-opt="full" onclick="switchText('full')">📚 第1–3话合集</div>
+    <div class="option-btn" data-opt="single" onclick="switchText('single')">🎯 单发第3话</div>
+  </div>
+  <div class="copy-area">
+    <div class="text-block" id="bodyText">
+那年我16岁，第一次在学校机房见到电脑。
+后来自己攒了一台 80286，在上面敲下人生第一行 BASIC：PRINT "HELLO"。
+我心里一直住着个程序员。
+
+可我妈让我学医。
+于是我穿上白大褂，一穿就是很多年。
+大学里电脑只剩网吧里的星际争霸，上网靠电话线，贵得肉疼。
+毕业后拼命钻研，治好的人越来越多——
+
+可一个人的力量，终究是有限的。
+病人越来越多，同样的话一天说几十遍，
+下了班还有几十条消息等着回，
+恨不得把自己掰成两半。
+
+直到有一天，我看向角落那台快20年的破电脑——
+外壳破损、二手配件、电源只有250W。
+我突然想：如果能让它替我回消息呢？
+
+我把这段"造分身"的过程，画成了日记漫画。
+这是前3话：从90年代机房少年，到瓶颈中的医生，再到那个灵光一闪的瞬间。
+
+👉 还会继续画下去，关注我看后续。</div>
+    <button class="copy-btn" id="copyBody" onclick="copyText('bodyText','copyBody')">📋 复制正文</button>
+  </div>
+</div>
+
+<!-- 标题 -->
+<div class="section">
+  <div class="section-title">🏷️ 标题 <span class="badge">按发布批次选</span></div>
+  <div class="section-desc">首条发第1+2话 → 用主推；第2条发第3话 → 情绪向；后面还有预留。</div>
+  <div class="copy-area">
+    <div class="text-block" id="titleText" style="min-height:auto;padding:10px 12px">20年前的破电脑，我造了AI分身</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0">
+      <span style="font-size:11px;background:#ffd34d;color:#1a1a2e;font-weight:600;padding:3px 8px;border-radius:4px">首条</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('20年前的破电脑，我造了AI分身')">主推</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('不会编程的医生，造了个AI分身')">备A</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('从90年代机房少年到AI分身医生')">备B</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
+      <span style="font-size:11px;background:#e63b4e;color:#fff;font-weight:600;padding:3px 8px;border-radius:4px">第2条</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('一个人的力量，终究是有限的')">第3话专用</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
+      <span style="font-size:11px;background:#666;color:#fff;font-weight:600;padding:3px 8px;border-radius:4px">预留</span>
+      <span style="font-size:12px;color:#999;cursor:pointer;padding:4px 10px;border:1px solid #ddd;border-radius:6px" onclick="setTitle('250W电源装AI？疯了吧')">第4话预告</span>
+    </div>
+    <button class="copy-btn small" onclick="copyText('titleText','')">📋 复制标题</button>
+  </div>
+</div>
+
+<!-- 话题标签 -->
+<div class="section">
+  <div class="section-title">#️⃣ 话题标签</div>
+  <div class="tag-block" id="tagDisplay">
+    <span class="tag">#医生日常</span>
+    <span class="tag">#AI分身</span>
+    <span class="tag">#人工智能</span>
+    <span class="tag">#数字分身</span>
+    <span class="tag">#90年代回忆</span>
+    <span class="tag">#理工男</span>
+    <span class="tag">#从医之路</span>
+    <span class="tag">#怀旧</span>
+    <span class="tag">#小红书漫画</span>
+    <span class="tag">#程序员梦</span>
+    <span class="tag">#一个人的力量是有限的</span>
+  </div>
+  <div class="copy-area">
+    <div class="text-block" id="tagText" style="min-height:auto;padding:10px 12px">#医生日常 #AI分身 #人工智能 #数字分身 #90年代回忆 #理工男 #从医之路 #怀旧 #小红书漫画 #程序员梦 #一个人的力量是有限的</div>
+    <button class="copy-btn small" onclick="copyText('tagText','')">📋 复制标签</button>
+  </div>
+</div>
+
+<!-- 发布小贴士 -->
+<div class="section">
+  <div class="section-title">💡 发布小贴士</div>
+  <div class="copy-area">
+    <div class="text-block" style="min-height:auto;padding:10px 12px;font-size:12px;color:#666;background:#fafafa">
+• 首图最关键：发布时点"编辑封面"，选合适首格
+• 正文别太长：200–300字已在舒适区
+• 互动引导：结尾"关注我看后续"能提升关注转化
+• 发布时间：工作日晚 20:00–22:00 或周末上午
+• 合规提醒：建议加一句"科普分享，不替代医生诊疗"
+• 连续发布：第1+2话一次发，第3话隔1–2天发</div>
+  </div>
+</div>
+
+<!-- 图片素材 -->
+<div class="section img-section">
+  <div class="section-title">🖼️ 图片素材 <span class="badge">点按钮加载</span></div>
+  <div class="section-desc">想看哪话就点哪个按钮，图片才会加载，省流量省时间。长按图片保存到相册。</div>
+  <div class="img-tabs">
+    <div class="img-tab active" data-ch="1" onclick="switchChapter(1)">第1话<span class="sub">90年代机房</span></div>
+    <div class="img-tab" data-ch="2" onclick="switchChapter(2)">第2话<span class="sub">梦想到白大褂</span></div>
+    <div class="img-tab" data-ch="3" onclick="switchChapter(3)">第3话<span class="sub">一个人的力量</span></div>
+  </div>
+  <div class="img-wrap show" data-ch="1">
+    <img src="第1话_条漫.jpg" alt="第1话条漫(压缩版)" onclick="saveImage(this)">
+    <div class="img-foot">
+      <span>第1话 · 90年代的那个机房</span>
+      <span class="save-link" onclick="saveImgEl('第1话_条漫.jpg','第1话条漫')">💾 保存图片</span>
+    </div>
+  </div>
+  <div class="img-wrap" data-ch="2">
+    <img src="" alt="第2话条漫(压缩版)" data-src="第2话_条漫.jpg" onclick="saveImage(this)">
+    <div class="img-foot">
+      <span>第2话 · 从科学家梦到白大褂</span>
+      <span class="save-link" onclick="saveImgEl('第2话_条漫.jpg','第2话条漫')">💾 保存图片</span>
+    </div>
+  </div>
+  <div class="img-wrap" data-ch="3">
+    <img src="" alt="第3话条漫(压缩版)" data-src="第3话_条漫.jpg" onclick="saveImage(this)">
+    <div class="img-foot">
+      <span>第3话 · 一个人的力量是有限的</span>
+      <span class="save-link" onclick="saveImgEl('第3话_条漫.jpg','第3话条漫')">💾 保存图片</span>
+    </div>
+  </div>
+</div>
+
+<div class="notice">
+  <strong>⚠️ 合规提醒：</strong>漫画涉及医疗场景，发布时建议在正文末尾加一句"科普分享，不替代医生诊疗"，规避医疗内容风险。
+</div>
+
+<div class="footer">
+  <p>第1–3话 · 矢量分镜预览版</p>
+  <p>正式出图按分镜脚本提示词用AI绘画工具生成</p>
+</div>
+
+<script>
+function switchText(v){
+  document.querySelectorAll('.option-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`[data-opt="${v}"]`).classList.add('active');
+  
+  const el=document.getElementById('bodyText');
+  if(v==='full'){
+    el.textContent=`那年我16岁，第一次在学校机房见到电脑。
+后来自己攒了一台 80286，在上面敲下人生第一行 BASIC：PRINT "HELLO"。
+我心里一直住着个程序员。
+
+可我妈让我学医。
+于是我穿上白大褂，一穿就是很多年。
+大学里电脑只剩网吧里的星际争霸，上网靠电话线，贵得肉疼。
+毕业后拼命钻研，治好的人越来越多——
+
+可一个人的力量，终究是有限的。
+病人越来越多，同样的话一天说几十遍，
+下了班还有几十条消息等着回，
+恨不得把自己掰成两半。
+
+直到有一天，我看向角落那台快20年的破电脑——
+外壳破损、二手配件、电源只有250W。
+我突然想：如果能让它替我回消息呢？
+
+我把这段"造分身"的过程，画成了日记漫画。
+这是前3话：从90年代机房少年，到瓶颈中的医生，再到那个灵光一闪的瞬间。
+
+👉 还会继续画下去，关注我看后续。`;
+  } else {
+    el.textContent=`病人越来越多，每天像打仗。
+同样的话，一天说几十遍。
+下了班，还有几十条消息等着回。
+夜里还要看书、查文献、不学就跟不上。
+
+恨不得把自己掰成两半。
+
+可一个人的力量……终究是有限的。
+
+要是有人帮我就好了……
+
+---
+
+我把这种"一个人的无力感"，画成了第3话。
+👉 前两话已发，这是续集。关注我看第4话。`;
+  }
+}
+
+function setTitle(t){
+  document.getElementById('titleText').textContent=t;
+}
+
+function copyText(id,btnId){
+  const text=document.getElementById(id).textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>{
+      flashBtn(btnId||id.replace('Text','copy'));
+    }).catch(()=>fallbackCopy(text,id,btnId));
+  } else {
+    fallbackCopy(text,id,btnId);
+  }
+}
+
+function fallbackCopy(text,id,btnId){
+  const ta=document.createElement('textarea');
+  ta.value=text;
+  ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);
+  ta.select();
+  try{document.execCommand('copy')}catch(e){}
+  document.body.removeChild(ta);
+  const bid=btnId||id.replace('Text','copy');
+  flashBtn(bid);
+}
+
+function flashBtn(id){
+  const btn=document.getElementById(id);
+  if(!btn) return;
+  const orig=btn.textContent;
+  btn.textContent='✅ 已复制！';
+  btn.classList.add('copied');
+  setTimeout(()=>{
+    btn.textContent=orig;
+    btn.classList.remove('copied');
+  },2000);
+}
+
+function saveImage(img){
+  if(!img.src||!img.src.startsWith('http')) return;
+  const a=document.createElement('a');
+  a.href=img.src;
+  a.download=img.alt||'条漫.png';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+function saveImgEl(src,label){
+  const a=document.createElement('a');
+  a.href=src;
+  a.download=label+'.png';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+function switchChapter(n){
+  document.querySelectorAll('.img-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector(`.img-tab[data-ch="${n}"]`).classList.add('active');
+  document.querySelectorAll('.img-wrap').forEach(w=>w.classList.remove('show'));
+  const wrap=document.querySelector(`.img-wrap[data-ch="${n}"]`);
+  wrap.classList.add('show');
+  const img=wrap.querySelector('img');
+  if(img&&img.dataset.src&&!img.getAttribute('src')){
+    img.src=img.dataset.src;
+  }
+}
+</script>
+</body>
+</html>
